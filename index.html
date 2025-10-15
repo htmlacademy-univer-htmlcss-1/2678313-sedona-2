@@ -40,14 +40,12 @@
         </ul>
       </nav>
     </header>
+
     <main class="main-index">
       <h1 class="visually-hidden">Sedona</h1>
-      <section class="greeting">
-        <h2 class="greeting_title">Седона — небольшой городок в Аризоне,
-заслуживающий большего!</h2>
-        <p class="greeting-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
-      </section>
       <section class="advantages">
+        <h2 class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
+        <p class="advantages-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <h2 class="visually-hidden">Преимущества</h2>
         <ul class="advantages-list">
           <li class="advantages-item advantages-item--signature">
@@ -79,8 +77,10 @@
         </ul>
       </section>
       <section class="comfort">
-        <h2 class="comfort-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
-        <p class="comfort-description">Опытный персонал и качественное обслуживание!</p>
+        <header class="comfort-header">
+          <h2 class="comfort-title">Приезжайте в Седону отдохнуть в комфорте и уюте!</h2>
+          <p class="comfort-description">Опытный персонал и качественное обслуживание!</p>
+        </header>
         <ul class="comfort-list">
           <li class="comfort-item">
             <h3 class="comfort-item-title">Жилье</h3>
@@ -106,39 +106,35 @@
         <p class="subscribes-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post">
           <input type="email" name="email" placeholder="Ваш e-mail">
-          <button>Подписаться</button>
+          <button class="button-general button-blue">Подписаться</button>
         </form>
       </section>
-
     </main>
+
     <footer class="page-footer">
-      <section class="sociaty">
-        <ul class="sociaty-list">
-          <li class="sociaty-item">
-            <a href="#" class="sociaty-link">
+      <section class="footer-sociaty">
+        <ul class="footer-sociaty-list">
+          <li class="footer-sociaty-item">
+            <a href="#" class="footer-sociaty-link">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
-          <li class="sociaty-item">
-            <a href="#" class="sociaty-link">
+          <li class="footer-sociaty-item">
+            <a href="#" class="footer-sociaty-link">
               <span class="visually-hidden">Телеграм</span>
             </a>
           </li>
-          <li class="sociaty-item">
-            <a href="#" class="sociaty-link">
+          <li class="footer-sociaty-item">
+            <a href="#" class="footer-sociaty-link">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
         </ul>
-
       </section>
-      <section class="contacts">
-        <a href="tel:+78128121212" class="contacts-link">8 (812) 812-12-12</a>
-      </section>
-      <section class="htmlacademy">
-        <a href="https://htmlacademy.ru/" class="htmlacademy-link">
-          <span class="visually-hidden">.html academy</span></a>
-      </section>
+      <address class="footer-contacts">
+        <a href="tel:+78128121212" class="footer-contacts-link">8 (812) 812-12-12</a>
+      </address>
+      <img src="#" alt="htmlacademy" class="footer-logo">
     </footer>
   </body>
 </html>
