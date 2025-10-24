@@ -34,17 +34,12 @@ body {
     font-weight: 700;
     line-height: 24px;
     background-color: #ffffff;
-    text-align: center;
 }
 
 .page-header a{
     color: #000000;
     text-decoration: none;
 
-}
-
-.navigation-list{
-    list-style: none;
 }
 
 .advantages{
@@ -62,7 +57,7 @@ body {
     text-align: center;
 }
 
-.main-index h2{
+.general-main h2{
     color:#000000;
     font-size: 30px;
     font-weight: 700;
@@ -70,14 +65,10 @@ body {
     text-transform: uppercase;
 }
 
-.main-index h2+p{
+.general-main h2+p{
     font-size: 22px;
     font-weight: 400;
     line-height: 26px;
-}
-
-.advantages-list{
-    list-style: none;
 }
 
 .advantages-item{
@@ -103,11 +94,6 @@ body {
 
 .advantages-item--center{
     background-color: rgba(131, 179, 211, 0.2);
-}
-
-
-.comfort-list{
-    list-style: none;
 }
 
 .comfort-item{
@@ -137,6 +123,19 @@ body {
     text-decoration: none;
     border: none;
     border-radius: 4px;
+}
+
+.button-general:hover, .button-general:focus{
+    background-color: #615048;
+}
+
+.button-general:active{
+    background-color: #756157;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+.button-general:disabled{
+    background-color: #e5e5e5;
 }
 
 .interesting .button-general{
@@ -175,16 +174,16 @@ body {
     border-radius: 0 4px 4px 0;
 }
 
-.button-blue{
+.additional-button{
     background-color: #82B3D3;
 }
 
-.page-footer{
-    text-align: center;
+.additional-button:hover, .additional-button:focus{
+    background-color: #68A2CA;
 }
 
-.footer-sociaty-list{
-    list-style: none;
+.additional-button:active{
+    background-color: #82B3D3;
 }
 
 .footer-contacts-link{
@@ -197,9 +196,6 @@ body {
 
 
 /*Catalog*/
-.main-hotel{
-    text-align: center;
-}
 
 .hotels{
     background-image: url(../images/catalog/filter.jpg);
@@ -215,7 +211,6 @@ body {
 }
 
 .breadcrumbs{
-    list-style: none;
     font-size: 16px;
     line-height: 21px;
 }
@@ -253,14 +248,18 @@ body {
     border-radius: 0 4px 4px 0;
 }
 
-.button-empty{
+.button-empty, .button-empty:focus, .button-empty:active{
     background: none;
 }
 
-.catalog-hotels-title{
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 36px;
+.button-empty:hover{
+    background: none;
+    opacity: 0.6;
+}
+
+.button-empty:disabled{
+    background: none;
+    opacity: 0.1;
 }
 
 .select-control{
@@ -281,10 +280,6 @@ body {
     border: 2px solid #000000;
 }
 
-.hotel-list{
-    list-style: none;
-}
-
 .hotel-card{
     border: 1px solid #e5e5e5;
     border-radius: 4px;
@@ -303,7 +298,15 @@ body {
     line-height: 21px;
 }
 
-.button-green{
+.selected-button{
+    background-color: #7DB54F;
+}
+
+.selected-button:hover, .selected-button:focus{
+    background-color: #6C9E42;
+}
+
+.selected-button:active{
     background-color: #7DB54F;
 }
 
@@ -317,10 +320,6 @@ body {
     text-transform: uppercase;
     background-color: #F2F2F2;
     border-radius: 4px;
-}
-
-.pagination{
-    list-style: none;
 }
 
 .pagination-link{
