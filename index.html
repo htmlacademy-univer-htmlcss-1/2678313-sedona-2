@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -32,7 +33,7 @@
             <a href="#" class="navigation-link">
               <span class="visually-hidden">Избранное</span>
             </a>
-            <div class="count-favourites">12</div>
+            <span class="count-favourites">12</span>
           </li>
           <li class="navigation-item">
             <button class="button-general">Хочу сюда!</button>
@@ -41,14 +42,16 @@
       </nav>
     </header>
 
-    <main class="main-index">
+    <main class="general-main main-index">
       <h1 class="visually-hidden">Sedona</h1>
       <section class="advantages">
+        <img src="images/welcome/welcome.svg" alt="Welcome to the Sedona" width="458" height="352">
+        </div>
         <h2 class="advantages-title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="advantages-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <ul class="advantages-list">
-          <li class="advantages-item advantages-item--signature">
-            <h3 class="advantages-item-title">Настоящий городок</h3>
+          <li class="advantages-item advantages-item--background">
+            <h3 class="advantages-item-title item--background">Настоящий городок</h3>
             <p class="advantages-item-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
           </li>
           <li class="advantages-item advantages-image">
@@ -58,7 +61,7 @@
             <h3 class="advantages-item-title">Небольшая площадь</h3>
             <p class="advantages-item-description">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item advantages-item--center">
             <h3 class="advantages-item-title">Красивая дорога</h3>
             <p class="advantages-item-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
@@ -69,8 +72,8 @@
           <li class="advantages-item advantages-image">
             <img src="images/advantages/grand-canyon.jpg" width="800" height="385" alt="Гранд Каньон">
           </li>
-          <li class="advantages-item advantages-item--signature">
-            <h3 class="advantages-item-title">Там есть мост дьявола</h3>
+          <li class="advantages-item advantages-item--background">
+            <h3 class="advantages-item-title item--background">Там есть мост дьявола</h3>
             <p class="advantages-item-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
         </ul>
@@ -85,7 +88,7 @@
             <h3 class="comfort-item-title">Жилье</h3>
             <p class="comfort-item-description">Рекомендуем пожить в настоящем мотеле,всё как в кино!</p>
           </li>
-          <li class="comfort-item">
+          <li class="comfort-item comfort-item--center">
             <h3 class="comfort-item-title">Еда</h3>
             <p class="comfort-item-description">Всегда заказывайте топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
@@ -96,7 +99,7 @@
         </ul>
       </section>
       <section class="interesting">
-        <h2 class="interesting-title">Заинтересовались</h2>
+        <h2 class="interesting-title">Заинтересовались?</h2>
         <p class="interesting-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <button class="button-general">Поиск гостиницы в седоне</button>
       </section>
@@ -104,8 +107,8 @@
         <h2 class="subscribes-title">Подпишитесь на рассылку</h2>
         <p class="subscribes-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form action="https://echo.htmlacademy.ru/" method="post">
-          <input type="email" name="email" placeholder="Ваш e-mail">
-          <button class="button-general button-blue">Подписаться</button>
+          <input class="subscribes-input" type="email" name="email" placeholder="Ваш e-mail">
+          <button class="button-general additional-button">Подписаться</button>
         </form>
       </section>
     </main>
@@ -132,7 +135,7 @@
         </ul>
       </section>
       <address class="footer-contacts">
-        <a href="tel:+78128121212" class="footer-contacts-link">8 (812) 812-12-12</a>
+        <a href="tel:+78128121212" class="footer-contacts-link">+7 (812) 812-12-12</a>
       </address>
       <a href="https://up.htmlacademy.ru" class="footer-logo">
         <img src="images/logo/html-academy.svg" width="115" height="33" alt="htmlacademy" class="footer-logo">
