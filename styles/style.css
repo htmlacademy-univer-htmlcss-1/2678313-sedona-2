@@ -54,8 +54,13 @@ body {
     margin: 0 auto;
 }
 
+.page-navigation{
+    display: flex;
+}
+
 .navigation-list{
-    margin: 0 30px;
+    margin: 0;
+    margin-left: 30px;
 }
 
 .navigation-list--user{
@@ -308,25 +313,14 @@ body {
 /* catalog-filter */
 .catalog-filter{
     display: flex;
-    justify-content: space-between;
-}
-
-.catalog-filter-left{
-    display: flex;
-    justify-content: space-between;
-    width: 371px;
-}
-
-.catalog-filter-right{
-    display: flex;
-    justify-content: space-between;
-    width: 549px;
 }
 
 .hotel-filter-group{
     border: none;
     width: 150px;
     padding: 0;
+    margin: 0;
+    margin-right: 70px;
 }
 
 .hotel-filter-title{
@@ -341,6 +335,7 @@ body {
 
 .price-filter{
     width: 288px;
+    margin-left: auto;
 }
 
 .price-input{
