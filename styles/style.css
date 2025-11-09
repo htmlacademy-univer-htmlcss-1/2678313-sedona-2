@@ -87,9 +87,8 @@ body {
     content: "";
     position: absolute;
     bottom: -1px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 32px);
+    left: 16px;
+    right: 16px;
     height: 2px;
     background-color: #756257;
 }
@@ -867,6 +866,7 @@ body {
 .pagination{
     list-style-type: none;
     display: flex;
+    align-items: center;
     position: relative;
     padding: 0;
     margin: 0;
@@ -894,14 +894,17 @@ body {
     font-weight: 700;
     line-height: 36px;
     display: block;
-    padding: 12px 24px;
+    width: 60px;
+    text-align: center;
+    padding: 12px 0;
 }
 
-.pagination-link:not(.pagination-current):hover, .pagination-link:not(.pagination-current):focus{
+.pagination-link:not(.pagination-current, .pagination-ellipsis):hover,
+.pagination-link:not(.pagination-current, .pagination-ellipsis):focus{
     background-color: #68A2CA;
 }
 
-.pagination-link:not(.pagination-current):active{
+.pagination-link:not(.pagination-current, .pagination-ellipsis):active{
     background-color: #82B3D3;
     color: rgba(255, 255, 255, 0.3);
 }
