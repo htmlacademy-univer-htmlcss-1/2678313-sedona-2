@@ -776,12 +776,13 @@ body {
 }
 
 .toggle-max{
-    left: 207px;
+    right: 0;
 }
 
 .filter-button-container{
     width: 191px;
     margin-top: 56px;
+    text-align: center;
 }
 
 .filter-button-container .additional-button{
@@ -1153,50 +1154,66 @@ body {
     margin-bottom: 64px;
 }
 
+.search-form-field-wrapper{
+    height: 100%;
+    position: relative;
+}
+
 .search-form{
     display: grid;
     row-gap: 48px;
-    column-gap: 88px;
     grid-template-areas:
-    "fd fd"
-    "fd2 fd2"
-    "fn fn2"
-    "bt bt";
+    "lab fd fd fd fd fd"
+    "lab2 fd2 fd2 fd2 fd2 fd2"
+    "lab3 fn1 . lab4 fn2 ."
+    "bt bt bt bt bt bt";
     grid-template-rows: 48px 48px 48px 60px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 137px 110px 88px 132px 110px auto;
+    align-items: center;
+
 }
 
-.field-group:nth-child(1){
+.field-group:nth-child(1) .search-form-label{
+    grid-area: lab;
+}
+
+.field-group:nth-child(1) .search-form-field-wrapper{
     grid-area: fd;
+
 }
 
-.field-group:nth-child(2){
+.field-group:nth-child(2) .search-form-label{
+    grid-area: lab2;
+}
+
+.field-group:nth-child(2) .search-form-field-wrapper{
     grid-area: fd2;
 }
 
-.field-group:nth-child(3){
-    grid-area: fn;
-    grid-template-columns: auto 110px;
-
+.field-group:nth-child(3) .search-form-label{
+    grid-area: lab3;
 }
-.field-group:nth-child(4){
-    grid-area: fn2;
-    grid-template-columns: auto 110px;
 
+.field-group:nth-child(3) .counter{
+    grid-area: fn1;
+}
+
+.field-group:nth-child(4) .search-form-label{
+    grid-area: lab4;
+}
+
+.field-group:nth-child(4) .counter{
+    grid-area: fn2;
 }
 
 .search-form .additional-button{
     grid-area: bt;
+    height: 100%;
 }
 
 .field-group{
-    display: grid;
+    display: contents;
     margin: 0;
-    max-width: 577px;
-    grid-template-columns: auto 440px;
-    align-items: center;
-    position: relative;
-    justify-content: space-between;
 }
 
 .search-form-label{
@@ -1208,32 +1225,34 @@ body {
 
 .search-form-field{
     width: 100%;
-    color: transparent;
     background: none;
     border: none;
     background-color: #F2F2F2;
     border-radius: 4px;
-    padding: 0;
     height: 100%;
+    color: #000000;
+    font-family: "PT Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    box-sizing: border-box;
     display: block;
     position: relative;
 }
 
 .search-form-field::-webkit-calendar-picker-indicator {
     opacity: 0;
-    display: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
 }
 
-.search-form-field::before {
-    content: attr(placeholder);
-    color: #000000;
-    position: absolute;
-    left: 20px;
-    top: 12px;
-    font-family: "PT Sans", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 24px;
+.search-form-field:not(.field-number) {
+    padding-left: 20px;
 }
 
 .search-form-field::after {
@@ -1248,34 +1267,25 @@ body {
     top: 14px;
 }
 
-.field-group:nth-child(1)::after{
-    content: 'Мы не можем  отправить вас в прошлое.';
+.field-message{
     position: absolute;
     bottom: -25px;
-    right: 140px;
-    color: #FF5757;
+    left: 20px;
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
 }
 
-.field-group:nth-child(2)::after{
-    content: 'На эти даты есть свободные номера. Пока есть.';
-    position: absolute;
-    bottom: -25px;
-    right: 89px;
-    color: #333333;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 21px;
+.field-error{
+    color: #FF5757;
 }
+
+.field-news{
+    color: #333333;
+}
+
 
 .field-number{
-    font-family: "PT Sans", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 20px;
-    color: #000000;
     text-align: center;
     max-width: 30px;
 }
