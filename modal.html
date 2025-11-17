@@ -108,7 +108,7 @@
       <section class="interesting">
         <h2 class="interesting-title">Заинтересовались?</h2>
         <p class="interesting-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-        <a href="modal.html" class="button-general">Поиск гостиницы в седоне</a>
+        <button class="button-general">Поиск гостиницы в седоне</button>
       </section>
       <section class="subscribes">
         <div class="subscribes-container">
@@ -178,5 +178,56 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal-container">
+        <div class="modal modal-search-hotel">
+            <a href="index.html" class="modal-close-button">
+              <div class="close"></div>
+                <span class="visually-hidden">Закрыть</span>
+            </a>
+            <section class="modal-content">
+                <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+                <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
+                    <p class="field-group">
+
+                        <label class="search-form-label" for="search-check-in">Дата заезда:</label>
+                        <span class="search-form-field-wrapper">
+                          <input class="search-form-field field-date" type="date" id="search-check-in" name="search-check-in">
+                          <span class="field-message field-error">
+                            Мы не можем отправить вас в прошлое.
+                          </span>
+                        </span>
+
+                    </p>
+                    <p class="field-group">
+                        <label class="search-form-label" for="search-check-out">Дата выезда:</label>
+                        <span class="search-form-field-wrapper">
+                          <input class="search-form-field field-date" type="date" id="search-check-out" name="earch-check-out">
+                          <span class="field-message field-news">
+                            На эти даты есть свободные номера. Пока есть.
+                          </span>
+                        </span>
+                    </p>
+                    <p class="field-group">
+                        <label class="search-form-label" for="search-adults">Взрослые:</label>
+                        <span class="counter">
+                            <button class="counter-btn--minus" type="button"></button>
+                            <input class="search-form-field field-number" type="number" id="search-adults" name="earch-adults" value="2">
+                            <button class="counter-btn--plus" type="button"></button>
+                        </span>
+                    </p>
+                    <p class="field-group">
+                        <label class="search-form-label" for="search-children">Дети: <span class="tooltip-icon"></span></label>
+                        <span class="counter">
+                            <button class="counter-btn--minus" type="button"></button>
+                            <input class="search-form-field field-number" type="number" id="search-children" name="earch-children" value="2">
+                            <button class="counter-btn--plus" type="button"></button>
+                        </span>
+                    </p>
+                    <button class="button-general additional-button" type="submit">Найти</button>
+                </form>
+            </section>
+        </div>
+    </div>
   </body>
 </html>
