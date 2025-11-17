@@ -189,12 +189,24 @@
                 <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
                 <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
                     <p class="field-group">
+
                         <label class="search-form-label" for="search-check-in">Дата заезда:</label>
-                        <input class="search-form-field field-date" type="date" id="search-check-in" name="search-check-in" placeholder="27 апреля 2020">
+                        <span class="search-form-field-wrapper">
+                          <input class="search-form-field field-date" type="date" id="search-check-in" name="search-check-in">
+                          <span class="field-message field-error">
+                            Мы не можем отправить вас в прошлое.
+                          </span>
+                        </span>
+
                     </p>
                     <p class="field-group">
                         <label class="search-form-label" for="search-check-out">Дата выезда:</label>
-                        <input class="search-form-field field-date" type="date" id="search-check-out" name="earch-check-out" placeholder="1 сентября 2023">
+                        <span class="search-form-field-wrapper">
+                          <input class="search-form-field field-date" type="date" id="search-check-out" name="earch-check-out">
+                          <span class="field-message field-news">
+                            На эти даты есть свободные номера. Пока есть.
+                          </span>
+                        </span>
                     </p>
                     <p class="field-group">
                         <label class="search-form-label" for="search-adults">Взрослые:</label>
@@ -207,9 +219,9 @@
                     <p class="field-group">
                         <label class="search-form-label" for="search-children">Дети: <span class="tooltip-icon"></span></label>
                         <span class="counter">
-                            <button class="counter-btn--minus"></button>
+                            <button class="counter-btn--minus" type="button"></button>
                             <input class="search-form-field field-number" type="number" id="search-children" name="earch-children" value="2">
-                            <button class="counter-btn--plus"></button>
+                            <button class="counter-btn--plus" type="button"></button>
                         </span>
                     </p>
                     <button class="button-general additional-button" type="submit">Найти</button>
